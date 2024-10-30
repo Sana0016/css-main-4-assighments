@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2c3e50;
+    font-family: Arial, sans-serif;
+    color: white;
+    perspective: 1000px;
+}
+.scene {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 10s infinite linear;
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: translateZ(-150px);
+}
+
+.cube__face {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    font-size: 24px;
+}
+
+.cube__face--front  { transform: rotateY(  0deg) translateZ(150px); }
+.cube__face--back   { transform: rotateY(180deg) translateZ(150px); }
+.cube__face--right  { transform: rotateY( 90deg) translateZ(150px); }
+.cube__face--left   { transform: rotateY(-90deg) translateZ(150px); }
+
+.content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+a {
+    display: block;
+    margin-top: 10px;
+    color: #3498db;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="scene">
+        <div class="cube">
+            <div class="cube__face cube__face--front">
+                <div class="content">
+                    <h2>Mdn Webstie</h2>
+                    <a href="https://sana0016.github.io/Mdn-website-/">View Project</a>
+                </div>
+            </div>
+            <div class="cube__face cube__face--back">
+                <div class="content">
+                    <h2>Product Card</h2>
+                    <a href="https://sana0016.github.io/Product-card/">View Project</a>
+                </div>
+            </div>
+            <div class="cube__face cube__face--right">
+                <div class="content">
+                    <h2>Color Pllate</h2>
+                    <a href="https://github.com/Sana0016/Color-Platte-">View Project</a>
+                </div>
+            </div>
+            <div class="cube__face cube__face--left">
+                <div class="content">
+                    <h2>Forms</h2>
+                    <a href="https://github.com/Sana0016/Forms">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
